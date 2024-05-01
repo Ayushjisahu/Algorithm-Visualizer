@@ -17,7 +17,6 @@ let isPaused = false;
 let isGenerated = true;
 let isSorted = false;
 
-// stack implementation.
 class Stack {
   constructor() {
     this.arr = [];
@@ -38,11 +37,10 @@ class Stack {
   }
 }
 
-// get random value between min and max;
 function getRandomValue(min, max) {
   return Math.random() * (max - min) + min;
 }
-// Generate random heights of the bar and create div element of the bar.
+
 function generateRandomArray() {
   isGenerated = true;
   isSorted = false;
@@ -74,7 +72,6 @@ function generateRandomArray() {
 }
 generateRandomArray();
 
-// swap 2 bars and also swap trnasform property for the animation.
 function swap(i, minindex) {
   [heights[i], heights[minindex]] = [heights[minindex], heights[i]];
 
