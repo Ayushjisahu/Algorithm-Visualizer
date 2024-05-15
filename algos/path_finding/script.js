@@ -242,6 +242,7 @@ const animate = async (nodesToAnimate, speed) => {
     }
   }
 };
+
 const generatePath = (path) => {
   let pathFromSrcToDest = [];
   let curi = endingPointX;

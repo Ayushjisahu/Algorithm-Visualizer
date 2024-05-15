@@ -53,7 +53,7 @@ function generateRandomArray() {
     heights[i] = parseInt(getRandomValue(1, height));
     bars.push(document.createElement("div"));
     bars[i].style.width = `${lineWidth}px`;
-    bars[i].style.height = `${heights[i] - 10}px`;
+    bars[i].style.height = `${heights[i]}px`;
     bars[i].style.transform = `translate(${i * lineWidth + i}px)`;
     bars[i].style.backgroundColor = "white";
     bars[i].className = "bar";

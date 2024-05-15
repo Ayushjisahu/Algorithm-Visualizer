@@ -1,22 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 * {
-  font-family: sans-serif;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  width: 100%;
-  background-color: #000;
-  overflow: hidden;
+  height: 100vh;
+  background: #212833;
+  box-shadow: inset 0 70px 80px rgb(0 0 0 / 21%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+}
+
+/* =============  Scrollbar  ============= */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: white;
 }
 
 #header {
-  display: flex;
+  width: 100vw;
   background-color: white;
-  height: 70px;
-  width: 100%;
-  justify-content: space-between;
+  overflow: hidden;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  font-family: "Poppins", sans-serif;
+  backdrop-filter: blur(8px);
+  padding: 20px;
+}
+#header a {
+  text-decoration: none;
+}
+#title {
+  font-family: sans-serif;
+  margin: 0px 100px;
+  text-align: center;
+  font-size: 2rem;
+  /* color: rgb(90, 0, 90) ; */
+  color: black;
+  padding: 1rem 0;
+  font-weight: bold;
 }
 
 #header > div {
@@ -25,7 +62,12 @@ body {
 
 #headerLeft {
   display: flex;
-  padding-left: 40px;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+}
+.headerLeftContent {
+  display: flex;
 }
 .slidecontainer {
   position: relative;
@@ -58,37 +100,31 @@ a {
   text-decoration: none;
 }
 
-#title {
-  text-align: center;
-  font-size: 27px;
-  color: black;
-  font-weight: bold;
-}
-
-#headerRight {
+/* #headerRight {
   text-align: right;
-  padding-right: 55px;
-}
+  padding: 50px;
+  margin: 20px 20px;
+  width: 30%;
+} */
 #sort_type {
   font-size: 15px;
-  height: 25px;
-  width: 150px;
-  padding-left: 5px;
-  border-radius: 7px;
+  padding: 5px 10px;
+  border-radius: 5px;
   background: #161824;
   color: white;
   outline: none;
+  border: none;
 }
 
 #container {
   display: flex;
   width: 99%;
   min-width: 99%;
-  height: 420px;
+  height: 570px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  margin-top: 25px;
+  margin-top: 50px;
 }
 
 .bar {
@@ -98,29 +134,29 @@ a {
   position: absolute;
 }
 .barValue {
-  display: none;
   margin-right: 1px;
   align-self: flex-end;
   transition: 0.2s transform ease;
   position: absolute;
   color: red;
   font-weight: bold;
+  font-size: 12px;
 }
 
 .button {
-  width: 115px;
-  height: 37px;
-  font-size: 20px;
-  border-radius: 10px;
-  margin-top: 15px;
-  color: #000;
-  border: none;
-  background: #fff;
+  padding: 0.8rem 1.4rem;
+  font-size: 1rem;
+  color: white;
+  border-radius: 5px;
+  background: #161824;
   letter-spacing: 1.2px;
-  transition: all 0.25s ease-in-out;
+  border: none;
   outline: none;
+  margin-top: 1rem;
+  transition: all 0.25s ease-in-out;
 }
 .button:hover {
+  cursor: pointer;
   transform: scale(1.1) perspective(1px);
 }
 #buttonsdiv {
@@ -135,14 +171,11 @@ a {
 }
 
 #generateButton {
-  font-family: sans-serif;
-  background-color: #000;
-  color: #fff;
-  height: 25px;
-  width: 110px;
+  padding: 0.4rem 0.8rem;
   font-size: 16px;
-  border-radius: 7px;
+  border-radius: 5px;
   margin-top: 0px;
+  font-size: 0.9rem;
 }
 #generateButton:hover {
   transform: scale(1.08) perspective(1px);
